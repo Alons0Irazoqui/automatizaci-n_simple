@@ -1,8 +1,9 @@
-# <div align="center">
-<img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge" />
-<img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Status-Production-brightgreen?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Hybridge%20Education-Ingenier%C3%ADa%20en%20Software-orange?style=for-the-badge" />
+
+<div align="center">
+<img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge" alt="Python" />
+<img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
+<img src="https://img.shields.io/badge/Status-Production-brightgreen?style=for-the-badge" alt="Status" />
+<img src="https://img.shields.io/badge/Hybridge%20Education-Ingenier%C3%ADa%20en%20Software-orange?style=for-the-badge" alt="Hybridge" />
 </div>
 
 <div align="center">
@@ -61,8 +62,8 @@ automatizacion_simple/
 ---
 
 <div align="center">
-<img src="https://img.shields.io/badge/Instalaci%C3%B3n-F%C3%A1cil-blue?style=flat-square" />
-<img src="https://img.shields.io/badge/CLI-Interactivo-lightgrey?style=flat-square" />
+<img src="https://img.shields.io/badge/Instalaci%C3%B3n-F%C3%A1cil-blue?style=flat-square" alt="Instalación Fácil" />
+<img src="https://img.shields.io/badge/CLI-Interactivo-lightgrey?style=flat-square" alt="CLI Interactivo" />
 </div>
 
 
@@ -110,14 +111,10 @@ Apple Inc. (AAPL): $182.52 USD
 ## Autor
 ---
 
-<div align="center">
-<img src="https://img.shields.io/badge/Autor-Alonso%20Irazoqui-blue?style=flat-square" />
+<div>
+<img src="https://img.shields.io/badge/Hybridge%20Education-Ingenier%C3%ADa%20en%20Software-green?style=for-the-badge" alt="Hybridge" />
+<img src="https://img.shields.io/badge/Autor-Alonso%20Irazoqui-blue?style=for-the-badge" alt="Autor Alonso Irazoqui" />
+<img src="https://img.shields.io/badge/Estudiente-4to%20Cuatrimestre-red?style=for-the-badge" alt="Estudiante 4to Cuatrimestre" />
 </div>
-
-**Alonso Irazoqui** *Estudiante de Ingeniería en Software - Hybridge Education*
 
 ---
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/PinedaAlan/automatizaci-n_simple/main/.github/banner.png" alt="Banner" width="80%" />
-</div>
