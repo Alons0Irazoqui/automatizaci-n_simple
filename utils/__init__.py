@@ -1,0 +1,2 @@
+from .sanitizar_texto import sanitizar_texto
+from .definir_entidad import definir_entidad

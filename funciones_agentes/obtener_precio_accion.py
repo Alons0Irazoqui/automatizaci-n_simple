@@ -1,30 +1,27 @@
-# importar la función By de selenium.webdriver.common.by,
-# misma que permite seleccionar elementos de una página web
-# por medio de selectores CSS.
-from selenium.webdriver.common.by import By
+import yfinance as yf
 
-# Función para obtener el precio de una acción
-# Parámetros:
-# - driver: objeto de Selenium WebDriver
-# - consulta: cadena de texto que contiene la consulta del usuario
-def obtener_precio_accion(driver, consulta):
-    # Buscar el precio de una acción en Google
-    driver.get(f"https://www.google.com/search?q=precio+acción+{consulta}")
 
-    # Bloque try-except para manejar errores
+def obtener_precio_por_nombre(nombre_empresa):
     try:
-        # Obtener el nombre completo de la emprea
-        empresa = driver.find_element(By.CSS_SELECTOR, "div[class='PZPZlf ssJ7i B5dxMb']").text
-
-        # Obtener el precio de la acción
-        precio = driver.find_element(By.CSS_SELECTOR, "span[jsname='vWLAgc']").text
-
-        # Obtener la divisa de la acción
-        divisa = 
-
-        # Obtener el ticker de la acción. Éste es el código que se usa para identificar la acción en la bolsa. Por ejemplo, el ticker de Apple es AAPL.
-        ticker = 
+        # Buscar empresa
+        search = yf.Search(nombre_empresa)
+        resultados = search.quotes
         
-        return f"{empresa} [{ticker}]  ${precio} {divisa.upper()}."
+        if not resultados:
+            return "No encontré esa empresa."
+        
+        # Tomamos el primer resultado
+        ticker = resultados[0]["symbol"]
+        nombre_real = resultados[0]["shortname"]
+        
+        stock = yf.Ticker(ticker)
+        precio = stock.history(period="1d")["Close"].iloc[-1]
+        
+        # Obtenemos la moneda en la que cotiza (ej. USD, MXN, EUR)
+        # Usamos .get() por si acaso yfinance no encuentra el dato, no marque error
+        moneda = stock.info.get("currency", "")
+        
+        return f"{nombre_real} ({ticker}): ${precio:.2f} {moneda}"
+    
     except Exception as e:
-        return "No se pudo obtener el precio de la acción en este momento."
+        return "Hubo un error al consultar la empresa."
